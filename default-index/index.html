@@ -86,7 +86,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">2</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">2</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">2</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">3</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -157,7 +157,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -202,6 +202,96 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/27/Vuex-persistedstate/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/AJ.jpg">
+      <meta itemprop="name" content="Peter Qiu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Inpro-QD-Blog">
+      <meta itemprop="description" content="Share knowledge about the front end">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Inpro-QD-Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/27/Vuex-persistedstate/" class="post-title-link" itemprop="url">Vuex data persistence</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-09-27 22:10:40 / Modified: 21:46:53" itemprop="dateCreated datePublished" datetime="2022-09-27T22:10:40+08:00">2022-09-27</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="持久化的目的"><a href="#持久化的目的" class="headerlink" title="持久化的目的"></a>持久化的目的</h2><blockquote>
+<p>Vuex提供给我们更方便和安全的数据管理，但是一旦刷新页面，所存储的数据也会消失。但是大多数的项目背景要求我们对数据进行复用，比如：头像和用户信息需要存储，登录状态和token，购物车数据等等，所以我们需要对特定的Vuex版块进行持久化处理。</p>
+</blockquote>
+<h2 id="安装vuex-persistedstate插件实现持久化"><a href="#安装vuex-persistedstate插件实现持久化" class="headerlink" title="安装vuex-persistedstate插件实现持久化"></a>安装vuex-persistedstate插件实现持久化</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save vuex-persistedstate</span><br></pre></td></tr></table></figure>
+<h3 id="引用插件"><a href="#引用插件" class="headerlink" title="引用插件"></a>引用插件</h3><ul>
+<li>在store文件夹下的index文件里引入<br><img src="https://img-blog.csdnimg.cn/108d944e20584f848beee02b6177b9ba.png" alt="请添加图片描述"></li>
+<li>具体操作步骤<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Vuex</span> <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="comment">// 第一步，引入持久化插件</span></span><br><span class="line"><span class="keyword">import</span> createPersistedState <span class="keyword">from</span> <span class="string">&#x27;vuex-persistedstate&#x27;</span></span><br><span class="line"><span class="comment">// 以下引入的是状态模块，仅是示例，根据实际项目情况而定</span></span><br><span class="line"><span class="keyword">import</span> shop <span class="keyword">from</span> <span class="string">&#x27;@/modules/shop&#x27;</span></span><br><span class="line"><span class="keyword">import</span> payment <span class="keyword">from</span> <span class="string">&#x27;@/modules/payment&#x27;</span></span><br><span class="line"><span class="keyword">import</span> news <span class="keyword">from</span> <span class="string">&#x27;@/modules/news &#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Vuex</span>)</span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> <span class="title class_">Vuex</span>.<span class="title class_">Store</span>(&#123;</span><br><span class="line">  <span class="attr">modules</span>: &#123;</span><br><span class="line">    shop,</span><br><span class="line">    payment,</span><br><span class="line">    news</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//第二步，进行持久化的配置</span></span><br><span class="line">  <span class="attr">plugins</span>: [<span class="title function_">createPersistedState</span>(&#123;</span><br><span class="line">    <span class="comment">// 这里可以配置存储在localStorage还是sessionStorage, 默认是localStorage,例如</span></span><br><span class="line">    <span class="attr">storage</span>: <span class="variable language_">window</span>.<span class="property">sessionStorage</span>,</span><br><span class="line">    <span class="comment">// paths是持久化存储state中的哪些数据，如果是模块下具体的数据需要加上模块名称，如payment.amount</span></span><br><span class="line">    <span class="attr">paths</span>: [<span class="string">&#x27;shop&#x27;</span>, <span class="string">&#x27;payment&#x27;</span>]</span><br><span class="line">  &#125;)]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> store</span><br></pre></td></tr></table></figure>
+<h3 id="实现部分数据持久化不同方法"><a href="#实现部分数据持久化不同方法" class="headerlink" title="实现部分数据持久化不同方法"></a>实现部分数据持久化不同方法</h3></li>
+<li>方法一，使用path指定持久化的模块<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Vuex</span> <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="keyword">import</span> createPersistedState <span class="keyword">from</span> <span class="string">&#x27;vuex-persistedstate&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Vuex</span>)</span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> <span class="title class_">Vuex</span>.<span class="title class_">Store</span>(&#123;</span><br><span class="line">  <span class="attr">modules</span>: &#123;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">plugins</span>: [<span class="title function_">createPersistedState</span>(&#123;</span><br><span class="line">    <span class="comment">// shop和payment是模块名，会被持久化</span></span><br><span class="line">    <span class="attr">paths</span>: [<span class="string">&#x27;shop&#x27;</span>, <span class="string">&#x27;payment&#x27;</span>]</span><br><span class="line">  &#125;)]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> store</span><br></pre></td></tr></table></figure></li>
+<li>方法二，使用<code>vuex-persistedstate</code>的reducer函数<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Vuex</span> <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="keyword">import</span> createPersistedState <span class="keyword">from</span> <span class="string">&#x27;vuex-persistedstate&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Vuex</span>)</span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> <span class="title class_">Vuex</span>.<span class="title class_">Store</span>(&#123;</span><br><span class="line">  <span class="attr">modules</span>: &#123;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">plugins</span>: [<span class="title function_">createPersistedState</span>(&#123;</span><br><span class="line">    <span class="comment">// shop和payment是模块名，会被持久化</span></span><br><span class="line">   reducer (val) &#123;</span><br><span class="line">   <span class="comment">// 这里的val指代的是store里的所有state</span></span><br><span class="line">     <span class="keyword">return</span> &#123;</span><br><span class="line">       <span class="comment">// 只储存state中payment模块下的amount数据，前面的amount是keyname</span></span><br><span class="line">       <span class="attr">amount</span>: val.<span class="property">payment</span>.<span class="property">amount</span></span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;)]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> store</span><br></pre></td></tr></table></figure>
+<h3 id="存储数据到cookie的步骤"><a href="#存储数据到cookie的步骤" class="headerlink" title="存储数据到cookie的步骤"></a>存储数据到cookie的步骤</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> createPersistedState <span class="keyword">from</span> <span class="string">&#x27;vuex-persistedstate&#x27;</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> <span class="title class_">Cookies</span> <span class="keyword">from</span> <span class="string">&#x27;js-cookie&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> <span class="title class_">Store</span>(&#123;</span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="title function_">createPersistedState</span>(&#123;</span><br><span class="line">      <span class="attr">storage</span>: &#123;</span><br><span class="line">        <span class="attr">getItem</span>: <span class="function">(<span class="params">key</span>) =&gt;</span> <span class="title class_">Cookies</span>.<span class="title function_">get</span>(key),</span><br><span class="line">        <span class="attr">setItem</span>: <span class="function">(<span class="params">key, value</span>) =&gt;</span> <span class="title class_">Cookies</span>.<span class="title function_">set</span>(key, value, &#123; <span class="attr">expires</span>: <span class="number">3</span>, <span class="attr">secure</span>: <span class="literal">true</span> &#125;),</span><br><span class="line">        <span class="attr">removeItem</span>: <span class="function">(<span class="params">key</span>) =&gt;</span> <span class="title class_">Cookies</span>.<span class="title function_">remove</span>(key),</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="加密持久化的数据"><a href="#加密持久化的数据" class="headerlink" title="加密持久化的数据"></a>加密持久化的数据</h3><blockquote>
+<p>因为持久化的数据是放在localStorage或者sessionStorage，所以为了数据安全，我们需要对持久化的版块进行加密。</p>
+</blockquote>
+</li>
+<li>安装加密的插件<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install secure-ls</span><br></pre></td></tr></table></figure></li>
+<li>在store/index.js引入<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Vuex</span> <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="keyword">import</span> createPersistedState <span class="keyword">from</span> <span class="string">&#x27;vuex-persistedstate&#x27;</span></span><br><span class="line"><span class="comment">// 引入插件</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">SecureLS</span> <span class="keyword">from</span> <span class="string">&#x27;secure-ls&#x27;</span></span><br><span class="line"><span class="comment">// encryptionSecret:自定义密钥，可选，这个操作能让数据更安全存储，密钥内容仅作参考，不要粘贴</span></span><br><span class="line"><span class="keyword">const</span> ls = <span class="keyword">new</span> <span class="title class_">SecureLS</span>(&#123; <span class="attr">isCompression</span>: <span class="literal">false</span>, <span class="attr">encryptionSecret</span>: <span class="string">&#x27;7352grt84-d90d-34dc-52e0-fad9efgwec675d1d&#x27;</span> &#125;)</span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Vuex</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> <span class="title class_">Vuex</span>.<span class="title class_">Store</span>(&#123;</span><br><span class="line">  <span class="attr">modules</span>: &#123;</span><br><span class="line">    shop,</span><br><span class="line">    payment</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">plugins</span>: [<span class="title function_">createPersistedState</span>(&#123;</span><br><span class="line">    <span class="attr">storage</span>: &#123;</span><br><span class="line">      <span class="attr">getItem</span>: <span class="function">(<span class="params">key</span>) =&gt;</span> ls.<span class="title function_">get</span>(key),</span><br><span class="line">      <span class="attr">setItem</span>: <span class="function">(<span class="params">key, value</span>) =&gt;</span> ls.<span class="title function_">set</span>(key, value),</span><br><span class="line">      <span class="attr">removeItem</span>: <span class="function">(<span class="params">key</span>) =&gt;</span> ls.<span class="title function_">remove</span>(key)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 需要持久化的模块</span></span><br><span class="line">    <span class="attr">paths</span>: [<span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;&#x27;</span>]</span><br><span class="line">  &#125;)]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> store</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>Vuex数据持久化的方法很多，<code>vuex-persistedstate</code>并不是唯一，可以自己书写JS实现，也可以用其他插件，例如vuex-persist。如果是公司项目进行数据持久化，最好对存储在localStorage的数据进行加密，防止数据泄露。</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
