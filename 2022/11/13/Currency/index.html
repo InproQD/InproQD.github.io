@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="一、用途 currency可用于货币与数字之间的转换，还可用于数值的加减乘除（主要解决的是浮点数的问题）  123const num &#x3D; 0.1 + 0.2 &#x2F;&#x2F; 返回结果0.30000000000000004&#x2F;&#x2F; 用curreny进行运算currency(0.1).add(0.2) &#x2F;&#x2F; 返回0.3 二、安装123npm install --save currency.js&#x2F;&#x2F; 或者yarn a">
+    <meta name="description" content="用途 currency可用于货币与数字之间的转换，还可用于数值的加减乘除（主要解决的是浮点数的问题）  123const num &#x3D; 0.1 + 0.2 &#x2F;&#x2F; 返回结果0.30000000000000004&#x2F;&#x2F; 用curreny进行运算currency(0.1).add(0.2) &#x2F;&#x2F; 返回0.3 安装123npm install --save currency.js&#x2F;&#x2F; 或者yarn add c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="currency">
 <meta property="og:url" content="http://example.com/2022/11/13/Currency/index.html">
 <meta property="og:site_name" content="Inpro-QD-Blog">
-<meta property="og:description" content="一、用途 currency可用于货币与数字之间的转换，还可用于数值的加减乘除（主要解决的是浮点数的问题）  123const num &#x3D; 0.1 + 0.2 &#x2F;&#x2F; 返回结果0.30000000000000004&#x2F;&#x2F; 用curreny进行运算currency(0.1).add(0.2) &#x2F;&#x2F; 返回0.3 二、安装123npm install --save currency.js&#x2F;&#x2F; 或者yarn a">
+<meta property="og:description" content="用途 currency可用于货币与数字之间的转换，还可用于数值的加减乘除（主要解决的是浮点数的问题）  123const num &#x3D; 0.1 + 0.2 &#x2F;&#x2F; 返回结果0.30000000000000004&#x2F;&#x2F; 用curreny进行运算currency(0.1).add(0.2) &#x2F;&#x2F; 返回0.3 安装123npm install --save currency.js&#x2F;&#x2F; 或者yarn add c">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-11-13T09:35:18.000Z">
-<meta property="article:modified_time" content="2022-11-21T21:22:17.885Z">
+<meta property="article:modified_time" content="2022-11-21T21:25:25.587Z">
 <meta property="article:author" content="Peter Qiu">
 <meta property="article:tag" content="JS Plugins">
 <meta name="twitter:card" content="summary">
@@ -146,7 +146,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%94%A8%E9%80%94"><span class="nav-number">1.</span> <span class="nav-text">一、用途</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">二、安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%BC%95%E5%85%A5"><span class="nav-number">3.</span> <span class="nav-text">三、引入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E4%BD%BF%E7%94%A8"><span class="nav-number">4.</span> <span class="nav-text">四、使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%BD%AC%E6%8D%A2%E8%B4%A7%E5%B8%81%E6%A0%BC%E5%BC%8F"><span class="nav-number">4.1.</span> <span class="nav-text">1. 转换货币格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%BF%94%E5%9B%9E%E5%80%BC%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.2.</span> <span class="nav-text">2. 返回值类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%BF%90%E7%AE%97"><span class="nav-number">4.3.</span> <span class="nav-text">3. 运算</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E9%80%94"><span class="nav-number">1.</span> <span class="nav-text">用途</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%85%A5"><span class="nav-number">3.</span> <span class="nav-text">引入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">4.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2%E8%B4%A7%E5%B8%81%E6%A0%BC%E5%BC%8F"><span class="nav-number">4.1.</span> <span class="nav-text">转换货币格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.2.</span> <span class="nav-text">返回值类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97"><span class="nav-number">4.3.</span> <span class="nav-text">运算</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -255,7 +255,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-11-22 05:22:17" itemprop="dateModified" datetime="2022-11-22T05:22:17+08:00">2022-11-22</time>
+      <time title="Modified: 2022-11-22 05:25:25" itemprop="dateModified" datetime="2022-11-22T05:25:25+08:00">2022-11-22</time>
     </span>
 
   
@@ -268,13 +268,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="一、用途"><a href="#一、用途" class="headerlink" title="一、用途"></a>一、用途</h2><blockquote>
+        <h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><blockquote>
 <p><code>currency</code>可用于货币与数字之间的转换，还可用于数值的加减乘除（主要解决的是浮点数的问题）</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> num = <span class="number">0.1</span> + <span class="number">0.2</span> <span class="comment">// 返回结果0.30000000000000004</span></span><br><span class="line"><span class="comment">// 用curreny进行运算</span></span><br><span class="line"><span class="title function_">currency</span>(<span class="number">0.1</span>).<span class="title function_">add</span>(<span class="number">0.2</span>) <span class="comment">// 返回0.3</span></span><br></pre></td></tr></table></figure>
-<h2 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install --save currency.js</span><br><span class="line">// 或者</span><br><span class="line">yarn add currency.js</span><br></pre></td></tr></table></figure>
-<h2 id="三、引入"><a href="#三、引入" class="headerlink" title="三、引入"></a>三、引入</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> currency = <span class="built_in">require</span>(<span class="string">&#x27;currency.js&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="四、使用"><a href="#四、使用" class="headerlink" title="四、使用"></a>四、使用</h2><h3 id="1-转换货币格式"><a href="#1-转换货币格式" class="headerlink" title="1. 转换货币格式"></a>1. 转换货币格式</h3><ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install --save currency.js</span><br><span class="line">// 或者</span><br><span class="line">yarn add currency.js</span><br></pre></td></tr></table></figure>
+<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> currency = <span class="built_in">require</span>(<span class="string">&#x27;currency.js&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="转换货币格式"><a href="#转换货币格式" class="headerlink" title="转换货币格式"></a>转换货币格式</h3><ul>
 <li>默认转为美元格式<code>$</code></li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">currency</span>(<span class="number">1000</span>).<span class="title function_">format</span>()<span class="comment">//$1,000.00</span></span><br></pre></td></tr></table></figure>
@@ -283,7 +283,7 @@
 <p>用<code>&#123;&#125;</code>囊括配置项<br><code>precision</code>指代精确到小数点哪一位，可选0，1，2…<br><code>symbol</code>则是数字前的符号，一般配置货币符号<br><code>decimal</code>选项是配置小数点那一位的符号（替换小数点）<br><code>separator</code>指代分隔符，按照三位数一个分隔符来格式化</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">currency</span>(<span class="number">1000.12</span>, &#123;<span class="attr">precision</span>: <span class="number">0</span>, <span class="attr">symbol</span>: <span class="string">&#x27;¥&#x27;</span>&#125;).<span class="title function_">format</span>()<span class="comment">// ¥1,000</span></span><br><span class="line"><span class="title function_">currency</span>(<span class="number">1000.12</span>, &#123;<span class="attr">symbol</span>: <span class="string">&#x27;€&#x27;</span>, <span class="attr">decimal</span>: <span class="string">&#x27;,&#x27;</span>, <span class="attr">separator</span>: <span class="string">&#x27;.&#x27;</span>&#125;).<span class="title function_">format</span>()<span class="comment">// €1.000,12</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-返回值类型"><a href="#2-返回值类型" class="headerlink" title="2. 返回值类型"></a>2. 返回值类型</h3></li>
+<h3 id="返回值类型"><a href="#返回值类型" class="headerlink" title="返回值类型"></a>返回值类型</h3></li>
 <li>value<blockquote>
 <p>返回的是原本的值，返回类型是==number==, 输入字符串类型的数字也会转==number==</p>
 </blockquote>
@@ -302,7 +302,7 @@
 </li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">currency</span>(<span class="number">121.34</span>).<span class="title function_">cents</span>()<span class="comment">// 返回 34</span></span><br><span class="line"><span class="title function_">currency</span>(<span class="number">0.45</span>).<span class="title function_">cents</span>()<span class="comment">// 返回 45</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-运算"><a href="#3-运算" class="headerlink" title="3. 运算"></a>3. 运算</h3><blockquote>
+<h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><blockquote>
 <p><code>curreny</code>提供的数字运算支持负数运算</p>
 </blockquote>
 <ul>
