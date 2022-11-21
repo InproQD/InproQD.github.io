@@ -250,7 +250,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-11-22 05:18:20" itemprop="dateModified" datetime="2022-11-22T05:18:20+08:00">2022-11-22</time>
+      <time title="Modified: 2022-11-22 05:22:17" itemprop="dateModified" datetime="2022-11-22T05:22:17+08:00">2022-11-22</time>
     </span>
 
   
@@ -263,8 +263,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>@<a href="%E7%9B%AE%E5%BD%95">TOC</a></p>
-<h2 id="一、用途"><a href="#一、用途" class="headerlink" title="一、用途"></a>一、用途</h2><blockquote>
+          <h2 id="一、用途"><a href="#一、用途" class="headerlink" title="一、用途"></a>一、用途</h2><blockquote>
 <p><code>currency</code>可用于货币与数字之间的转换，还可用于数值的加减乘除（主要解决的是浮点数的问题）</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> num = <span class="number">0.1</span> + <span class="number">0.2</span> <span class="comment">// 返回结果0.30000000000000004</span></span><br><span class="line"><span class="comment">// 用curreny进行运算</span></span><br><span class="line"><span class="title function_">currency</span>(<span class="number">0.1</span>).<span class="title function_">add</span>(<span class="number">0.2</span>) <span class="comment">// 返回0.3</span></span><br></pre></td></tr></table></figure>
@@ -379,7 +378,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-11-22 05:16:54" itemprop="dateModified" datetime="2022-11-22T05:16:54+08:00">2022-11-22</time>
+      <time title="Modified: 2022-11-22 05:22:21" itemprop="dateModified" datetime="2022-11-22T05:22:21+08:00">2022-11-22</time>
     </span>
 
   
@@ -480,7 +479,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-11-22 05:15:13" itemprop="dateModified" datetime="2022-11-22T05:15:13+08:00">2022-11-22</time>
+      <time title="Modified: 2022-11-22 05:22:19" itemprop="dateModified" datetime="2022-11-22T05:22:19+08:00">2022-11-22</time>
     </span>
 
   
@@ -493,8 +492,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>@<a href="%E7%9B%AE%E5%BD%95">TOC</a></p>
-<h2 id="一、配置"><a href="#一、配置" class="headerlink" title="一、配置"></a>一、配置</h2><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install moment</span><br></pre></td></tr></table></figure>
+          <h2 id="一、配置"><a href="#一、配置" class="headerlink" title="一、配置"></a>一、配置</h2><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install moment</span><br></pre></td></tr></table></figure>
 <h3 id="2-引入"><a href="#2-引入" class="headerlink" title="2. 引入"></a>2. 引入</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> moment = <span class="built_in">require</span>(<span class="string">&#x27;moment&#x27;</span>)</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line"><span class="keyword">import</span> moment <span class="keyword">from</span> <span class="string">&#x27;moment&#x27;</span></span><br></pre></td></tr></table></figure>
 <h2 id="二、常用的moment方法"><a href="#二、常用的moment方法" class="headerlink" title="二、常用的moment方法"></a>二、常用的moment方法</h2><h3 id="1-获取当前时间"><a href="#1-获取当前时间" class="headerlink" title="1. 获取当前时间"></a>1. 获取当前时间</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不传入值，返回的则是当前时间</span></span><br><span class="line"><span class="title function_">moment</span>() <span class="comment">// 返回的是一个对象，对象包含了当前的时间</span></span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">format</span>() <span class="comment">// 这样返回的才是时间，例如：2022-11-14T18:36:32+08:00</span></span><br></pre></td></tr></table></figure>
 <h3 id="2-格式化时间"><a href="#2-格式化时间" class="headerlink" title="2. 格式化时间"></a>2. 格式化时间</h3><ul>

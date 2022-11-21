@@ -21,18 +21,18 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="@TOC 一、配置1. 安装1npm install moment 2. 引入123const moment &#x3D; require(&amp;#x27;moment&amp;#x27;)&#x2F;&#x2F; 或者import moment from &amp;#x27;moment&amp;#x27; 二、常用的moment方法1. 获取当前时间123&#x2F;&#x2F; 不传入值，返回的则是当前时间moment() &#x2F;&#x2F; 返回的是一个对象，对象包含了当前的时间">
+    <meta name="description" content="一、配置1. 安装1npm install moment 2. 引入123const moment &#x3D; require(&amp;#x27;moment&amp;#x27;)&#x2F;&#x2F; 或者import moment from &amp;#x27;moment&amp;#x27; 二、常用的moment方法1. 获取当前时间123&#x2F;&#x2F; 不传入值，返回的则是当前时间moment() &#x2F;&#x2F; 返回的是一个对象，对象包含了当前的时间momen">
 <meta property="og:type" content="article">
 <meta property="og:title" content="moment.js">
 <meta property="og:url" content="http://example.com/2022/11/05/MomentJS/index.html">
 <meta property="og:site_name" content="Inpro-QD-Blog">
-<meta property="og:description" content="@TOC 一、配置1. 安装1npm install moment 2. 引入123const moment &#x3D; require(&amp;#x27;moment&amp;#x27;)&#x2F;&#x2F; 或者import moment from &amp;#x27;moment&amp;#x27; 二、常用的moment方法1. 获取当前时间123&#x2F;&#x2F; 不传入值，返回的则是当前时间moment() &#x2F;&#x2F; 返回的是一个对象，对象包含了当前的时间">
+<meta property="og:description" content="一、配置1. 安装1npm install moment 2. 引入123const moment &#x3D; require(&amp;#x27;moment&amp;#x27;)&#x2F;&#x2F; 或者import moment from &amp;#x27;moment&amp;#x27; 二、常用的moment方法1. 获取当前时间123&#x2F;&#x2F; 不传入值，返回的则是当前时间moment() &#x2F;&#x2F; 返回的是一个对象，对象包含了当前的时间momen">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/6b8415c139e7446382316739650b0265.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/81c15ac1b85743c48ce3f45098b3e941.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/2ad98619ce564b1aac0186b3451ce384.png">
 <meta property="article:published_time" content="2022-11-05T06:10:40.000Z">
-<meta property="article:modified_time" content="2022-11-21T21:15:13.505Z">
+<meta property="article:modified_time" content="2022-11-21T21:22:19.642Z">
 <meta property="article:author" content="Peter Qiu">
 <meta property="article:tag" content="JS Plugins">
 <meta name="twitter:card" content="summary">
@@ -259,7 +259,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-11-22 05:15:13" itemprop="dateModified" datetime="2022-11-22T05:15:13+08:00">2022-11-22</time>
+      <time title="Modified: 2022-11-22 05:22:19" itemprop="dateModified" datetime="2022-11-22T05:22:19+08:00">2022-11-22</time>
     </span>
 
   
@@ -272,8 +272,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>@<a href="%E7%9B%AE%E5%BD%95">TOC</a></p>
-<h2 id="一、配置"><a href="#一、配置" class="headerlink" title="一、配置"></a>一、配置</h2><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install moment</span><br></pre></td></tr></table></figure>
+        <h2 id="一、配置"><a href="#一、配置" class="headerlink" title="一、配置"></a>一、配置</h2><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install moment</span><br></pre></td></tr></table></figure>
 <h3 id="2-引入"><a href="#2-引入" class="headerlink" title="2. 引入"></a>2. 引入</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> moment = <span class="built_in">require</span>(<span class="string">&#x27;moment&#x27;</span>)</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line"><span class="keyword">import</span> moment <span class="keyword">from</span> <span class="string">&#x27;moment&#x27;</span></span><br></pre></td></tr></table></figure>
 <h2 id="二、常用的moment方法"><a href="#二、常用的moment方法" class="headerlink" title="二、常用的moment方法"></a>二、常用的moment方法</h2><h3 id="1-获取当前时间"><a href="#1-获取当前时间" class="headerlink" title="1. 获取当前时间"></a>1. 获取当前时间</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不传入值，返回的则是当前时间</span></span><br><span class="line"><span class="title function_">moment</span>() <span class="comment">// 返回的是一个对象，对象包含了当前的时间</span></span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">format</span>() <span class="comment">// 这样返回的才是时间，例如：2022-11-14T18:36:32+08:00</span></span><br></pre></td></tr></table></figure>
 <h3 id="2-格式化时间"><a href="#2-格式化时间" class="headerlink" title="2. 格式化时间"></a>2. 格式化时间</h3><ul>
