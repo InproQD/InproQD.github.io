@@ -86,7 +86,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">2</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">3</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">3</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">4</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -157,13 +157,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -175,6 +175,9 @@
       <span class="links-of-author-item">
         <a href="https://blog.csdn.net/m0_49909696?type=blog" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;m0_49909696?type&#x3D;blog" rel="noopener" target="_blank"><i class="fa-solid fa-basketball fa-fw"></i>CSDN</a>
       </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
   </div>
 
 
@@ -202,6 +205,145 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/05/MomentJS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/AJ.jpg">
+      <meta itemprop="name" content="Peter Qiu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Inpro-QD-Blog">
+      <meta itemprop="description" content="Share knowledge about the front end">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Inpro-QD-Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/11/05/MomentJS/" class="post-title-link" itemprop="url">Vuex study note</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-11-05 14:10:40" itemprop="dateCreated datePublished" datetime="2022-11-05T14:10:40+08:00">2022-11-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-11-22 05:10:54" itemprop="dateModified" datetime="2022-11-22T05:10:54+08:00">2022-11-22</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>@<a href="%E7%9B%AE%E5%BD%95">TOC</a></p>
+<h2 id="一、配置"><a href="#一、配置" class="headerlink" title="一、配置"></a>一、配置</h2><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install moment</span><br></pre></td></tr></table></figure>
+<h3 id="2-引入"><a href="#2-引入" class="headerlink" title="2. 引入"></a>2. 引入</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> moment = <span class="built_in">require</span>(<span class="string">&#x27;moment&#x27;</span>)</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line"><span class="keyword">import</span> moment <span class="keyword">from</span> <span class="string">&#x27;moment&#x27;</span></span><br></pre></td></tr></table></figure>
+<h2 id="二、常用的moment方法"><a href="#二、常用的moment方法" class="headerlink" title="二、常用的moment方法"></a>二、常用的moment方法</h2><h3 id="1-获取当前时间"><a href="#1-获取当前时间" class="headerlink" title="1. 获取当前时间"></a>1. 获取当前时间</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不传入值，返回的则是当前时间</span></span><br><span class="line"><span class="title function_">moment</span>() <span class="comment">// 返回的是一个对象，对象包含了当前的时间</span></span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">format</span>() <span class="comment">// 这样返回的才是时间，例如：2022-11-14T18:36:32+08:00</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-格式化时间"><a href="#2-格式化时间" class="headerlink" title="2. 格式化时间"></a>2. 格式化时间</h3><ul>
+<li><p>字符规则<br><img src="https://img-blog.csdnimg.cn/6b8415c139e7446382316739650b0265.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/81c15ac1b85743c48ce3f45098b3e941.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>().<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM-DD&#x27;</span>)<span class="comment">// 返回2022-11-15，因为moment()没传参，返回的是当前时间</span></span><br></pre></td></tr></table></figure></li>
+<li><p>格式化指定的时间（年月日）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;1998.12.25&#x27;</span>).<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM-DD&#x27;</span>)<span class="comment">// 输出为1998-12-25</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;1998.12.25&#x27;</span>).<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM-DDDD&#x27;</span>)<span class="comment">// 输出为1998-12-359</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;1998.12.25&#x27;</span>).<span class="title function_">format</span>(<span class="string">&#x27;YY-MM-DD&#x27;</span>)<span class="comment">// 输出为98-12-25</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;1998.12.25&#x27;</span>).<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM-DD-Q&#x27;</span>)<span class="comment">// 输出为1998-12-25-4</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;1998.12.25&#x27;</span>).<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM-Do&#x27;</span>)<span class="comment">// 输出为1998-12-25th</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;1998.12.25&#x27;</span>).<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MMM-Do&#x27;</span>)<span class="comment">// 输出为1998-Dec-25th</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;1998.12.25&#x27;</span>).<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MMMM-Do&#x27;</span>)<span class="comment">// 输出为1998-December-25th</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;1998.12.25&#x27;</span>).<span class="title function_">format</span>(<span class="string">&#x27;X&#x27;</span>)<span class="comment">// 输出为914515200</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;1998.12.25&#x27;</span>).<span class="title function_">format</span>(<span class="string">&#x27;x&#x27;</span>)<span class="comment">// 输出为914515200000,毫秒时间戳</span></span><br></pre></td></tr></table></figure></li>
+<li><p>格式化指定的时间（时分秒）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>(<span class="number">1318781876</span>).<span class="title function_">format</span>(<span class="string">&#x27;HH:mm:ss&#x27;</span>)<span class="comment">// 输出为14:19:41</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="number">1318781876</span>).<span class="title function_">format</span>(<span class="string">&#x27;hh:mm:ss&#x27;</span>)<span class="comment">//  输出为02:19:41</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="number">1318781876</span>).<span class="title function_">format</span>(<span class="string">&#x27;HH:mm:ss a&#x27;</span>)<span class="comment">// 输出为14:19:41 pm</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="number">1318781876</span>).<span class="title function_">format</span>(<span class="string">&#x27;HH:mm:ss A&#x27;</span>)<span class="comment">//  输出为14:19:41 PM</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-转换时间戳"><a href="#3-转换时间戳" class="headerlink" title="3. 转换时间戳"></a>3. 转换时间戳</h3><blockquote>
+<p>有两种方式转换时间戳，<code>moment().valueOf()</code>转换为毫秒数和<code>moment.unix()</code>转换为秒数</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>().<span class="title function_">valueOf</span>()<span class="comment">// 返回当前时间的毫秒时间戳</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// moment接收的是毫秒数，unix返回为秒数</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="number">1318781876</span>).<span class="title function_">unix</span>()<span class="comment">// 返回值1318781</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//moment也能接收其他格式的时间，将之转换为时间戳</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2022/3/28&#x27;</span>).<span class="title function_">unix</span>()<span class="comment">// 返回1648396800</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2022/3/28&#x27;</span>).<span class="title function_">valueOf</span>()<span class="comment">// 返回1648396800000</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-get-获取时间"><a href="#4-get-获取时间" class="headerlink" title="4. get()获取时间"></a>4. get()获取时间</h3><ul>
+<li>获取年份<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>().<span class="title function_">get</span>(<span class="string">&#x27;year&#x27;</span>) <span class="comment">// 返回2022</span></span><br></pre></td></tr></table></figure></li>
+<li>获取月份<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>().<span class="title function_">get</span>(<span class="string">&#x27;month&#x27;</span>) <span class="comment">// 返回0-11，假设当前12月，返回值就是11</span></span><br></pre></td></tr></table></figure></li>
+<li>获取日期<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>().<span class="title function_">get</span>(<span class="string">&#x27;date&#x27;</span>) <span class="comment">// 返回当前月份的天数，11.17则返回17</span></span><br></pre></td></tr></table></figure></li>
+<li>获取时分秒<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>().<span class="title function_">get</span>(<span class="string">&#x27;hour&#x27;</span>);</span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">get</span>(<span class="string">&#x27;minute&#x27;</span>);</span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">get</span>(<span class="string">&#x27;second&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
+<li>获取当月的天数<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>().<span class="title function_">daysInMonth</span>()<span class="comment">// 返回当前月份的天数</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-操作moment"><a href="#5-操作moment" class="headerlink" title="5. 操作moment"></a>5. 操作moment</h3><h4 id="01-add"><a href="#01-add" class="headerlink" title="01 add()"></a>01 add()</h4></li>
+<li>示例：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>().<span class="title function_">add</span>(<span class="number">7</span>, <span class="string">&#x27;days&#x27;</span>)<span class="comment">// 在当前时间的基础上往后顺延7天，假设今天2022/11/17,返回的结果应是2022/11/24</span></span><br><span class="line"><span class="comment">// 另一种写法</span></span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">add</span>(<span class="number">7</span>, <span class="string">&#x27;d&#x27;</span>)</span><br><span class="line"><span class="comment">// 链式写法</span></span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">add</span>(<span class="number">7</span>, <span class="string">&#x27;days&#x27;</span>).<span class="title function_">add</span>(<span class="number">1</span>, <span class="string">&#x27;months&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>可选键位表<br><img src="https://img-blog.csdnimg.cn/2ad98619ce564b1aac0186b3451ce384.png" alt="在这里插入图片描述"><h4 id="02-subtract"><a href="#02-subtract" class="headerlink" title="02  subtract()"></a>02  subtract()</h4></li>
+<li>与<code>add()</code>使用方法相同，键位也是一样</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>().<span class="title function_">subtract</span>(<span class="number">7</span>, <span class="string">&#x27;days&#x27;</span>)</span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">subtract</span>(<span class="number">7</span>, <span class="string">&#x27;d&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="03-startOf"><a href="#03-startOf" class="headerlink" title="03 startOf"></a>03 startOf</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>().<span class="title function_">startOf</span>(<span class="string">&#x27;year&#x27;</span>) <span class="comment">//一年的最开始，例如：2022/1/1 00:00:00</span></span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">startOf</span>(<span class="string">&#x27;month&#x27;</span>) <span class="comment">// 某个月的最开始 2022/11/01 00:00:00</span></span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">startOf</span>(<span class="string">&#x27;quarter&#x27;</span>) <span class="comment">// 当前季度的开始，2022-10-01 00:00:00(当前11月)</span></span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">startOf</span>(<span class="string">&#x27;week&#x27;</span>) <span class="comment">// 本周的第一天</span></span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">startOf</span>(<span class="string">&#x27;day&#x27;</span>) <span class="comment">// 当天的0点</span></span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">startOf</span>(<span class="string">&#x27;date&#x27;</span>) <span class="comment">//跟day一样，当天的0点</span></span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">startOf</span>(<span class="string">&#x27;hour&#x27;</span>) <span class="comment">// 当前小时的最开始</span></span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">startOf</span>(<span class="string">&#x27;minute&#x27;</span>) <span class="comment">// 当前分钟的最开始</span></span><br><span class="line"><span class="title function_">moment</span>().<span class="title function_">startOf</span>(<span class="string">&#x27;second&#x27;</span>) <span class="comment">// 当前秒的最开始</span></span><br></pre></td></tr></table></figure>
+<h4 id="04-endOf"><a href="#04-endOf" class="headerlink" title="04 endOf"></a>04 endOf</h4><ul>
+<li>跟 <code>startOf</code>同样的用法<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>().<span class="title function_">endOf</span>(<span class="string">&#x27;year&#x27;</span>) <span class="comment">// 2022-12-31 23: 59: 59</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-比较moment-查询moment"><a href="#6-比较moment-查询moment" class="headerlink" title="6. 比较moment(查询moment)"></a>6. 比较moment(查询moment)</h3><h4 id="01-isBefore"><a href="#01-isBefore" class="headerlink" title="01 isBefore"></a>01 isBefore</h4></li>
+<li>查询某个时间是否在另一时间之前</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一个moment是否在before里的时间之前</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2022-11-17&#x27;</span>).<span class="title function_">isBefore</span>(<span class="string">&#x27;2022-11-18&#x27;</span>); <span class="comment">// 返回true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>isBefore</code>接收第二个参数，作为比较的精度<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 两个时间只比较年份的先后</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2022-11-17&#x27;</span>).<span class="title function_">isBefore</span>(<span class="string">&#x27;2022-11-18&#x27;</span>, <span class="string">&#x27;year&#x27;</span>); <span class="comment">// 返回false</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2021-11-17&#x27;</span>).<span class="title function_">isBefore</span>(<span class="string">&#x27;2022-11-18&#x27;</span>, <span class="string">&#x27;year&#x27;</span>); <span class="comment">// 返回true</span></span><br><span class="line"><span class="comment">// 也可比较月份，日期，小时, 分钟，秒</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2022-10-17&#x27;</span>).<span class="title function_">isBefore</span>(<span class="string">&#x27;2022-11-18&#x27;</span>, <span class="string">&#x27;month&#x27;</span>); <span class="comment">// 返回true</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2021-11-17&#x27;</span>).<span class="title function_">isBefore</span>(<span class="string">&#x27;2022-11-18&#x27;</span>, <span class="string">&#x27;day&#x27;</span>); <span class="comment">// 返回true</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2022-11-17 17:53:24&#x27;</span>).<span class="title function_">isBefore</span>(<span class="string">&#x27;2022-11-17 18:53:24&#x27;</span>, <span class="string">&#x27;hour&#x27;</span>); <span class="comment">// 返回true</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2022-11-17 17:54:24&#x27;</span>).<span class="title function_">isBefore</span>(<span class="string">&#x27;2022-11-17 18:53:24&#x27;</span>, <span class="string">&#x27;minute&#x27;</span>); <span class="comment">// 返回false</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2022-11-17 17:53:23&#x27;</span>).<span class="title function_">isBefore</span>(<span class="string">&#x27;2022-11-17 18:53:24&#x27;</span>, <span class="string">&#x27;second&#x27;</span>); <span class="comment">// 返回true</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="02-isSame"><a href="#02-isSame" class="headerlink" title="02 isSame"></a>02 isSame</h4><ul>
+<li>查询两个时间是否一致，用法跟<code>isBefore</code>一样，接收第二个参数作为比较精度</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2022-11-17&#x27;</span>).<span class="title function_">isSame</span>(<span class="string">&#x27;2022-11-17&#x27;</span>) <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 比较精度</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2021-11-17&#x27;</span>).<span class="title function_">isSame</span>(<span class="string">&#x27;2022-11-17&#x27;</span>, <span class="string">&#x27;year&#x27;</span>);  <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>跟<code>isBefore</code>不一样的是，当接收第二个参数时，会比较精度之前的时间，例如：传入day为第二参数，会比较day之前的month和year，只有完全一样才会返回为true</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2021-11-17&#x27;</span>).<span class="title function_">isSame</span>(<span class="string">&#x27;2022-11-17&#x27;</span>, <span class="string">&#x27;day&#x27;</span>); <span class="comment">//false</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2022-07-17&#x27;</span>).<span class="title function_">isSame</span>(<span class="string">&#x27;2022-11-17&#x27;</span>, <span class="string">&#x27;day&#x27;</span>); <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<h4 id="03-isAfter"><a href="#03-isAfter" class="headerlink" title="03 isAfter"></a>03 isAfter</h4><ul>
+<li>用于比较moment在某个时间之后，跟<code>isSame</code>一样，使用day为第二参数，将会检查年份、月份、日期。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2021-11-19&#x27;</span>).<span class="title function_">isAfter</span>(<span class="string">&#x27;2021-11-17&#x27;</span>); <span class="comment">// true</span></span><br><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2022-07-18&#x27;</span>).<span class="title function_">isSame</span>(<span class="string">&#x27;2022-11-17&#x27;</span>, <span class="string">&#x27;day&#x27;</span>); <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<h4 id="04-isSameOrBefore和isSameOrAfter"><a href="#04-isSameOrBefore和isSameOrAfter" class="headerlink" title="04 isSameOrBefore和isSameOrAfter"></a>04 isSameOrBefore和isSameOrAfter</h4><ul>
+<li><code>isSameOrBefore</code>判断是否一样或在某个时间之前，等同于<code>&gt;=</code>和<code>&lt;=</code>，第二参数会精准比较</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2022-10-20&#x27;</span>).<span class="title function_">isSameOrBefore</span>(<span class="string">&#x27;2021-12-31&#x27;</span>, <span class="string">&#x27;year&#x27;</span>); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>isSameOrBefore</code>判断是否一样或在某个时间之后，第二参数会精准比较</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2022-10-20&#x27;</span>).<span class="title function_">isSameOrAfter</span>(<span class="string">&#x27;2023-12-31&#x27;</span>, <span class="string">&#x27;year&#x27;</span>); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<h4 id="05-isBetween"><a href="#05-isBetween" class="headerlink" title="05 isBetween"></a>05 isBetween</h4><ul>
+<li><code>isBetween</code>接收两个时间参数作为范围，比较moment是否在这个范围之内</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">moment</span>(<span class="string">&#x27;2022-11-17&#x27;</span>).<span class="title function_">isBetween</span>(<span class="string">&#x27;2022-11-10&#x27;</span>, <span class="string">&#x27;2022-11-25&#x27;</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -239,9 +381,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-09-27 22:10:40 / Modified: 21:46:53" itemprop="dateCreated datePublished" datetime="2022-09-27T22:10:40+08:00">2022-09-27</time>
+      <time title="Created: 2022-09-27 22:10:40" itemprop="dateCreated datePublished" datetime="2022-09-27T22:10:40+08:00">2022-09-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-09-28 13:14:14" itemprop="dateModified" datetime="2022-09-28T13:14:14+08:00">2022-09-28</time>
     </span>
 
   
