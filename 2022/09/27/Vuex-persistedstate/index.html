@@ -5,8 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Vuex data persistence, InproQD">
-    <meta name="description" content="持久化的目的
-Vuex提供给我们更方便和安全的数据管理，但是一旦刷新页面，所存储的数据也会消失。但是大多数的项目背景要求我们对数据进行复用，比如：头像和用户信息需要存储，登录状态和token，购物车数据等等，所以我们需要对特定的Vuex版块">
+    <meta name="description" content="一、持久化的目的
+Vuex提供给我们更方便和安全的数据管理，但是一旦刷新页面，所存储的数据也会消失。但是大多数的项目背景要求我们对数据进行复用，比如：头像和用户信息需要存储，登录状态和token，购物车数据等等，所以我们需要对特定的Vuex">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -320,68 +320,139 @@ Vuex提供给我们更方便和安全的数据管理，但是一旦刷新页面�
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="持久化的目的"><a href="#持久化的目的" class="headerlink" title="持久化的目的"></a>持久化的目的</h2><blockquote>
+                <h2 id="一、持久化的目的"><a href="#一、持久化的目的" class="headerlink" title="一、持久化的目的"></a>一、持久化的目的</h2><blockquote>
 <p>Vuex提供给我们更方便和安全的数据管理，但是一旦刷新页面，所存储的数据也会消失。但是大多数的项目背景要求我们对数据进行复用，比如：头像和用户信息需要存储，登录状态和token，购物车数据等等，所以我们需要对特定的Vuex版块进行持久化处理。</p>
 </blockquote>
-<h2 id="安装vuex-persistedstate插件实现持久化"><a href="#安装vuex-persistedstate插件实现持久化" class="headerlink" title="安装vuex-persistedstate插件实现持久化"></a>安装vuex-persistedstate插件实现持久化</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre class=" language-javascript"><code class="language-javascript">npm install <span class="token operator">--</span>save vuex<span class="token operator">-</span>persistedstate
+<h2 id="二、安装vuex-persistedstate插件实现持久化"><a href="#二、安装vuex-persistedstate插件实现持久化" class="headerlink" title="二、安装vuex-persistedstate插件实现持久化"></a>二、安装vuex-persistedstate插件实现持久化</h2><h3 id="01-安装"><a href="#01-安装" class="headerlink" title="01 安装"></a>01 安装</h3><pre class=" language-javascript"><code class="language-javascript">npm install <span class="token operator">--</span>save vuex<span class="token operator">-</span>persistedstate
 </code></pre>
-<h3 id="引用插件"><a href="#引用插件" class="headerlink" title="引用插件"></a>引用插件</h3><ul>
-<li>在store文件夹下的index文件里引入<br><img src="https://img-blog.csdnimg.cn/108d944e20584f848beee02b6177b9ba.png" alt="请添加图片描述"></li>
-<li>具体操作步骤<br>```javascript<br>import Vue from ‘vue’<br>import Vuex from ‘vuex’<br>// 第一步，引入持久化插件<br>import createPersistedState from ‘vuex-persistedstate’<br>// 以下引入的是状态模块，仅是示例，根据实际项目情况而定<br>import shop from ‘@/modules/shop’<br>import payment from ‘@/modules/payment’<br>import news from ‘@/modules/news ‘</li>
+<h3 id="02-引用插件"><a href="#02-引用插件" class="headerlink" title="02 引用插件"></a>02 引用插件</h3><ul>
+<li><p>在store文件夹下的index文件里引入<br><img src="https://img-blog.csdnimg.cn/108d944e20584f848beee02b6177b9ba.png" alt="Vuex结构"></p>
+</li>
+<li><p>具体操作步骤</p>
+</li>
 </ul>
-<p>Vue.use(Vuex)<br>const store = new Vuex.Store({<br>  modules: {<br>    shop,<br>    payment,<br>    news<br>  },<br>  //第二步，进行持久化的配置<br>  plugins: [createPersistedState({<br>    // 这里可以配置存储在localStorage还是sessionStorage, 默认是localStorage,例如<br>    storage: window.sessionStorage,<br>    // paths是持久化存储state中的哪些数据，如果是模块下具体的数据需要加上模块名称，如payment.amount<br>    paths: [‘shop’, ‘payment’]<br>  })]<br>})<br>export default store</p>
-<pre><code>### 实现部分数据持久化不同方法
-- 方法一，使用path指定持久化的模块
-```javascript
-import Vue from &#39;vue&#39;
-import Vuex from &#39;vuex&#39;
-import createPersistedState from &#39;vuex-persistedstate&#39;
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+<span class="token comment" spellcheck="true">// 第一步，引入持久化插件</span>
+<span class="token keyword">import</span> createPersistedState <span class="token keyword">from</span> <span class="token string">'vuex-persistedstate'</span>
+<span class="token comment" spellcheck="true">// 以下引入的是状态模块，仅是示例，根据实际项目情况而定</span>
+<span class="token keyword">import</span> shop <span class="token keyword">from</span> <span class="token string">'@/modules/shop'</span>
+<span class="token keyword">import</span> payment <span class="token keyword">from</span> <span class="token string">'@/modules/payment'</span>
+<span class="token keyword">import</span> news <span class="token keyword">from</span> <span class="token string">'@/modules/news '</span>
 
-Vue.use(Vuex)
-const store = new Vuex.Store(&#123;
-  modules: &#123;
-  &#125;,
-  plugins: [createPersistedState(&#123;
-    // shop和payment是模块名，会被持久化
-    paths: [&#39;shop&#39;, &#39;payment&#39;]
-  &#125;)]
-&#125;)
-export default store
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  modules<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    shop<span class="token punctuation">,</span>
+    payment<span class="token punctuation">,</span>
+    news
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">//第二步，进行持久化的配置</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token function">createPersistedState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 这里可以配置存储在localStorage还是sessionStorage, 默认是localStorage,例如</span>
+    storage<span class="token punctuation">:</span> window<span class="token punctuation">.</span>sessionStorage<span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// paths是持久化存储state中的哪些数据，如果是模块下具体的数据需要加上模块名称，如payment.amount</span>
+    paths<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'shop'</span><span class="token punctuation">,</span> <span class="token string">'payment'</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> store
+</code></pre>
+<h3 id="03-实现部分数据持久化不同方法"><a href="#03-实现部分数据持久化不同方法" class="headerlink" title="03 实现部分数据持久化不同方法"></a>03 实现部分数据持久化不同方法</h3><ul>
+<li>方法一，使用path指定持久化的模块</li>
+</ul>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+<span class="token keyword">import</span> createPersistedState <span class="token keyword">from</span> <span class="token string">'vuex-persistedstate'</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  modules<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token function">createPersistedState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// shop和payment是模块名，会被持久化</span>
+    paths<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'shop'</span><span class="token punctuation">,</span> <span class="token string">'payment'</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> store
 </code></pre>
 <ul>
-<li>方法二，使用<code>vuex-persistedstate</code>的reducer函数<br>```javascript<br>import Vue from ‘vue’<br>import Vuex from ‘vuex’<br>import createPersistedState from ‘vuex-persistedstate’</li>
+<li>方法二，使用<code>vuex-persistedstate</code>的reducer函数</li>
 </ul>
-<p>Vue.use(Vuex)<br>const store = new Vuex.Store({<br>  modules: {<br>  },<br>  plugins: [createPersistedState({<br>    // shop和payment是模块名，会被持久化<br>   reducer (val) {<br>   // 这里的val指代的是store里的所有state<br>     return {<br>       // 只储存state中payment模块下的amount数据，前面的amount是keyname<br>       amount: val.payment.amount<br>     }<br>   }<br>  })]<br>})<br>export default store</p>
-<pre><code>### 存储数据到cookie的步骤
-```javascript
-import createPersistedState from &#39;vuex-persistedstate&#39;
-import * as Cookies from &#39;js-cookie&#39;
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+<span class="token keyword">import</span> createPersistedState <span class="token keyword">from</span> <span class="token string">'vuex-persistedstate'</span>
 
-const store = new Store(&#123;
-  plugins: [
-    createPersistedState(&#123;
-      storage: &#123;
-        getItem: (key) =&gt; Cookies.get(key),
-        setItem: (key, value) =&gt; Cookies.set(key, value, &#123; expires: 3, secure: true &#125;),
-        removeItem: (key) =&gt; Cookies.remove(key),
-      &#125;
-    &#125;)
-  ]
-&#125;)
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  modules<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token function">createPersistedState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// shop和payment是模块名，会被持久化</span>
+   reducer <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token comment" spellcheck="true">// 这里的val指代的是store里的所有state</span>
+     <span class="token keyword">return</span> <span class="token punctuation">{</span>
+       <span class="token comment" spellcheck="true">// 只储存state中payment模块下的amount数据，前面的amount是keyname</span>
+       amount<span class="token punctuation">:</span> val<span class="token punctuation">.</span>payment<span class="token punctuation">.</span>amount
+     <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> store
 </code></pre>
-<h3 id="加密持久化的数据"><a href="#加密持久化的数据" class="headerlink" title="加密持久化的数据"></a>加密持久化的数据</h3><blockquote>
+<h3 id="04-存储数据到cookie的步骤"><a href="#04-存储数据到cookie的步骤" class="headerlink" title="04 存储数据到cookie的步骤"></a>04 存储数据到cookie的步骤</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> createPersistedState <span class="token keyword">from</span> <span class="token string">'vuex-persistedstate'</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> Cookies <span class="token keyword">from</span> <span class="token string">'js-cookie'</span>
+
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token function">createPersistedState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      storage<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        getItem<span class="token punctuation">:</span> <span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> Cookies<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        setItem<span class="token punctuation">:</span> <span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> Cookies<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">,</span> <span class="token punctuation">{</span> expires<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> secure<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        removeItem<span class="token punctuation">:</span> <span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> Cookies<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="05-加密持久化的数据"><a href="#05-加密持久化的数据" class="headerlink" title="05 加密持久化的数据"></a>05 加密持久化的数据</h3><blockquote>
 <p>因为持久化的数据是放在localStorage或者sessionStorage，所以为了数据安全，我们需要对持久化的版块进行加密。</p>
 </blockquote>
 <ul>
-<li>安装加密的插件<pre class=" language-javascript"><code class="language-javascript">npm install secure<span class="token operator">-</span>ls
-</code></pre>
-</li>
-<li>在store/index.js引入<br>```javascript<br>import Vue from ‘vue’<br>import Vuex from ‘vuex’<br>import createPersistedState from ‘vuex-persistedstate’<br>// 引入插件<br>import SecureLS from ‘secure-ls’<br>// encryptionSecret:自定义密钥，可选，这个操作能让数据更安全存储，密钥内容仅作参考，不要粘贴<br>const ls = new SecureLS({ isCompression: false, encryptionSecret: ‘7352grt84-d90d-34dc-52e0-fad9efgwec675d1d’ })<br>Vue.use(Vuex)</li>
+<li>安装加密的插件</li>
 </ul>
-<p>const store = new Vuex.Store({<br>  modules: {<br>    shop,<br>    payment<br>  },<br>  plugins: [createPersistedState({<br>    storage: {<br>      getItem: (key) =&gt; ls.get(key),<br>      setItem: (key, value) =&gt; ls.set(key, value),<br>      removeItem: (key) =&gt; ls.remove(key)<br>    },<br>    // 需要持久化的模块<br>    paths: [‘’, ‘’]<br>  })]<br>})</p>
-<p>export default store</p>
-<p>```</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<pre class=" language-cript"><code class="language-cript">npm install secure-ls
+</code></pre>
+<ul>
+<li>在store/index.js引入</li>
+</ul>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+<span class="token keyword">import</span> createPersistedState <span class="token keyword">from</span> <span class="token string">'vuex-persistedstate'</span>
+<span class="token comment" spellcheck="true">// 引入插件</span>
+<span class="token keyword">import</span> SecureLS <span class="token keyword">from</span> <span class="token string">'secure-ls'</span>
+<span class="token comment" spellcheck="true">// encryptionSecret:自定义密钥，可选，这个操作能让数据更安全存储，密钥内容仅作参考，不要粘贴</span>
+<span class="token keyword">const</span> ls <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SecureLS</span><span class="token punctuation">(</span><span class="token punctuation">{</span> isCompression<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> encryptionSecret<span class="token punctuation">:</span> <span class="token string">'7352grt84-d90d-34dc-52e0-fad9efgwec675d1d'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  modules<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    shop<span class="token punctuation">,</span>
+    payment
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token function">createPersistedState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    storage<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      getItem<span class="token punctuation">:</span> <span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> ls<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      setItem<span class="token punctuation">:</span> <span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> ls<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      removeItem<span class="token punctuation">:</span> <span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> ls<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// 需要持久化的模块</span>
+    paths<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">''</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> store
+</code></pre>
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h2><blockquote>
 <p>Vuex数据持久化的方法很多，<code>vuex-persistedstate</code>并不是唯一，可以自己书写JS实现，也可以用其他插件，例如vuex-persist。如果是公司项目进行数据持久化，最好对存储在localStorage的数据进行加密，防止数据泄露。</p>
 </blockquote>
 
