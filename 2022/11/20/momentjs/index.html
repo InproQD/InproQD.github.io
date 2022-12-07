@@ -5,13 +5,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="moment.js, InproQD">
-    <meta name="description" content="配置安装npm install moment
+    <meta name="description" content="一、配置01 安装npm install moment
 
-引入const moment = require(&#39;moment&#39;)
+02 引入const moment = require(&#39;moment&#39;)
 // 或者
 import moment from &#39;moment&#39;
 
-常用的moment方法获取当前时间// 不传入值，返">
+二、常用的moment方法01 获取">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -325,18 +325,18 @@ import moment from &#39;moment&#39;
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> moment
+                <h2 id="一、配置"><a href="#一、配置" class="headerlink" title="一、配置"></a>一、配置</h2><h3 id="01-安装"><a href="#01-安装" class="headerlink" title="01 安装"></a>01 安装</h3><pre class=" language-script"><code class="language-script">npm install moment
 </code></pre>
-<h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> moment <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'moment'</span><span class="token punctuation">)</span>
+<h3 id="02-引入"><a href="#02-引入" class="headerlink" title="02 引入"></a>02 引入</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> moment <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'moment'</span><span class="token punctuation">)</span>
 <span class="token comment" spellcheck="true">// 或者</span>
 <span class="token keyword">import</span> moment <span class="token keyword">from</span> <span class="token string">'moment'</span>
 </code></pre>
-<h2 id="常用的moment方法"><a href="#常用的moment方法" class="headerlink" title="常用的moment方法"></a>常用的moment方法</h2><h3 id="获取当前时间"><a href="#获取当前时间" class="headerlink" title="获取当前时间"></a>获取当前时间</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 不传入值，返回的则是当前时间</span>
+<h2 id="二、常用的moment方法"><a href="#二、常用的moment方法" class="headerlink" title="二、常用的moment方法"></a>二、常用的moment方法</h2><h3 id="01-获取当前时间"><a href="#01-获取当前时间" class="headerlink" title="01 获取当前时间"></a>01 获取当前时间</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 不传入值，返回的则是当前时间</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 返回的是一个对象，对象包含了当前的时间</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 这样返回的才是时间，例如：2022-11-14T18:36:32+08:00</span>
 </code></pre>
-<h3 id="格式化时间"><a href="#格式化时间" class="headerlink" title="格式化时间"></a>格式化时间</h3><ul>
-<li><p>字符规则<br><img src="https://img-blog.csdnimg.cn/6b8415c139e7446382316739650b0265.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/81c15ac1b85743c48ce3f45098b3e941.png" alt="在这里插入图片描述"></p>
+<h3 id="02-格式化时间"><a href="#02-格式化时间" class="headerlink" title="02 格式化时间"></a>02 格式化时间</h3><ul>
+<li><p>字符规则<br><img src="https://img-blog.csdnimg.cn/6b8415c139e7446382316739650b0265.png"><br><img src="https://img-blog.csdnimg.cn/81c15ac1b85743c48ce3f45098b3e941.png"></p>
 </li>
 <li><p>示例：</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'YYYY-MM-DD'</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 返回2022-11-15，因为moment()没传参，返回的是当前时间</span>
@@ -360,11 +360,11 @@ import moment from &#39;moment&#39;
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token number">1318781876</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'HH:mm:ss a'</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 输出为14:19:41 pm</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token number">1318781876</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'HH:mm:ss A'</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//  输出为14:19:41 PM</span>
 </code></pre>
-<h3 id="转换时间戳"><a href="#转换时间戳" class="headerlink" title="转换时间戳"></a>转换时间戳</h3><blockquote>
-<p>有两种方式转换时间戳，<code>moment().valueOf()</code>转换为毫秒数和<code>moment.unix()</code>转换为秒数</p>
-</blockquote>
 </li>
 </ul>
+<h3 id="03-转换时间戳"><a href="#03-转换时间戳" class="headerlink" title="03 转换时间戳"></a>03 转换时间戳</h3><blockquote>
+<p>有两种方式转换时间戳，<code>moment().valueOf()</code>转换为毫秒数和<code>moment.unix()</code>转换为秒数</p>
+</blockquote>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 返回当前时间的毫秒时间戳</span>
 
 <span class="token comment" spellcheck="true">// moment接收的是毫秒数，unix返回为秒数</span>
@@ -374,7 +374,7 @@ import moment from &#39;moment&#39;
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022/3/28'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unix</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 返回1648396800</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022/3/28'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 返回1648396800000</span>
 </code></pre>
-<h3 id="get-获取时间"><a href="#get-获取时间" class="headerlink" title="get()获取时间"></a>get()获取时间</h3><ul>
+<h3 id="04-get-获取时间"><a href="#04-get-获取时间" class="headerlink" title="04 get()获取时间"></a>04 get()获取时间</h3><ul>
 <li>获取年份<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'year'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 返回2022</span>
 </code></pre>
 </li>
@@ -391,7 +391,9 @@ import moment from &#39;moment&#39;
 </li>
 <li>获取当月的天数<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">daysInMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 返回当前月份的天数</span>
 </code></pre>
-<h3 id="操作moment"><a href="#操作moment" class="headerlink" title="操作moment"></a>操作moment</h3><h4 id="add"><a href="#add" class="headerlink" title="add()"></a>add()</h4></li>
+</li>
+</ul>
+<h3 id="05-操作moment"><a href="#05-操作moment" class="headerlink" title="05 操作moment"></a>05 操作moment</h3><h4 id="add"><a href="#add" class="headerlink" title="add()"></a>add()</h4><ul>
 <li>示例：<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token string">'days'</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 在当前时间的基础上往后顺延7天，假设今天2022/11/17,返回的结果应是2022/11/24</span>
 <span class="token comment" spellcheck="true">// 另一种写法</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">)</span>
@@ -399,13 +401,15 @@ import moment from &#39;moment&#39;
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token string">'days'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'months'</span><span class="token punctuation">)</span>
 </code></pre>
 </li>
-<li>可选键位表<br><img src="https://img-blog.csdnimg.cn/2ad98619ce564b1aac0186b3451ce384.png" alt="在这里插入图片描述"><h4 id="subtract"><a href="#subtract" class="headerlink" title="subtract()"></a>subtract()</h4></li>
-<li>与<code>add()</code>使用方法相同，键位也是一样</li>
+<li>可选键位表<br><img src="https://img-blog.csdnimg.cn/2ad98619ce564b1aac0186b3451ce384.png"></li>
 </ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">subtract</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token string">'days'</span><span class="token punctuation">)</span>
+<h4 id="subtract"><a href="#subtract" class="headerlink" title="subtract()"></a>subtract()</h4><ul>
+<li>与<code>add()</code>使用方法相同，键位也是一样<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">subtract</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token string">'days'</span><span class="token punctuation">)</span>
 <span class="token comment" spellcheck="true">//或者</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">subtract</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">)</span>
 </code></pre>
+</li>
+</ul>
 <h4 id="startOf"><a href="#startOf" class="headerlink" title="startOf"></a>startOf</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startOf</span><span class="token punctuation">(</span><span class="token string">'year'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//一年的最开始，例如：2022/1/1 00:00:00</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startOf</span><span class="token punctuation">(</span><span class="token string">'month'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 某个月的最开始 2022/11/01 00:00:00</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startOf</span><span class="token punctuation">(</span><span class="token string">'quarter'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 当前季度的开始，2022-10-01 00:00:00(当前11月)</span>
@@ -419,13 +423,13 @@ import moment from &#39;moment&#39;
 <h4 id="endOf"><a href="#endOf" class="headerlink" title="endOf"></a>endOf</h4><ul>
 <li>跟 <code>startOf</code>同样的用法<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">endOf</span><span class="token punctuation">(</span><span class="token string">'year'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 2022-12-31 23: 59: 59</span>
 </code></pre>
-<h3 id="比较moment-查询moment"><a href="#比较moment-查询moment" class="headerlink" title="比较moment(查询moment)"></a>比较moment(查询moment)</h3><h4 id="isBefore"><a href="#isBefore" class="headerlink" title="isBefore"></a>isBefore</h4></li>
-<li>查询某个时间是否在另一时间之前</li>
+</li>
 </ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 第一个moment是否在before里的时间之前</span>
+<h3 id="06-比较moment-查询moment"><a href="#06-比较moment-查询moment" class="headerlink" title="06 比较moment(查询moment)"></a>06 比较moment(查询moment)</h3><h4 id="isBefore"><a href="#isBefore" class="headerlink" title="isBefore"></a>isBefore</h4><ul>
+<li>查询某个时间是否在另一时间之前<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 第一个moment是否在before里的时间之前</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022-11-17'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isBefore</span><span class="token punctuation">(</span><span class="token string">'2022-11-18'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 返回true</span>
 </code></pre>
-<ul>
+</li>
 <li><code>isBefore</code>接收第二个参数，作为比较的精度<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 两个时间只比较年份的先后</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022-11-17'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isBefore</span><span class="token punctuation">(</span><span class="token string">'2022-11-18'</span><span class="token punctuation">,</span> <span class="token string">'year'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 返回false</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2021-11-17'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isBefore</span><span class="token punctuation">(</span><span class="token string">'2022-11-18'</span><span class="token punctuation">,</span> <span class="token string">'year'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 返回true</span>
@@ -439,39 +443,35 @@ import moment from &#39;moment&#39;
 </li>
 </ul>
 <h4 id="isSame"><a href="#isSame" class="headerlink" title="isSame"></a>isSame</h4><ul>
-<li>查询两个时间是否一致，用法跟<code>isBefore</code>一样，接收第二个参数作为比较精度</li>
-</ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022-11-17'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isSame</span><span class="token punctuation">(</span><span class="token string">'2022-11-17'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
+<li>查询两个时间是否一致，用法跟<code>isBefore</code>一样，接收第二个参数作为比较精度<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022-11-17'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isSame</span><span class="token punctuation">(</span><span class="token string">'2022-11-17'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true</span>
 <span class="token comment" spellcheck="true">// 比较精度</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2021-11-17'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isSame</span><span class="token punctuation">(</span><span class="token string">'2022-11-17'</span><span class="token punctuation">,</span> <span class="token string">'year'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// false</span>
 </code></pre>
-<ul>
-<li>跟<code>isBefore</code>不一样的是，当接收第二个参数时，会比较精度之前的时间，例如：传入day为第二参数，会比较day之前的month和year，只有完全一样才会返回为true</li>
-</ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2021-11-17'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isSame</span><span class="token punctuation">(</span><span class="token string">'2022-11-17'</span><span class="token punctuation">,</span> <span class="token string">'day'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//false</span>
+</li>
+<li>跟<code>isBefore</code>不一样的是，当接收第二个参数时，会比较精度之前的时间，例如：传入day为第二参数，会比较day之前的month和year，只有完全一样才会返回为true<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2021-11-17'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isSame</span><span class="token punctuation">(</span><span class="token string">'2022-11-17'</span><span class="token punctuation">,</span> <span class="token string">'day'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//false</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022-07-17'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isSame</span><span class="token punctuation">(</span><span class="token string">'2022-11-17'</span><span class="token punctuation">,</span> <span class="token string">'day'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//false</span>
 </code></pre>
-<h4 id="isAfter"><a href="#isAfter" class="headerlink" title="isAfter"></a>isAfter</h4><ul>
-<li>用于比较moment在某个时间之后，跟<code>isSame</code>一样，使用day为第二参数，将会检查年份、月份、日期。</li>
+</li>
 </ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2021-11-19'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isAfter</span><span class="token punctuation">(</span><span class="token string">'2021-11-17'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
+<h4 id="isAfter"><a href="#isAfter" class="headerlink" title="isAfter"></a>isAfter</h4><ul>
+<li>用于比较moment在某个时间之后，跟<code>isSame</code>一样，使用day为第二参数，将会检查年份、月份、日期。<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2021-11-19'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isAfter</span><span class="token punctuation">(</span><span class="token string">'2021-11-17'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022-07-18'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isSame</span><span class="token punctuation">(</span><span class="token string">'2022-11-17'</span><span class="token punctuation">,</span> <span class="token string">'day'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//false</span>
 </code></pre>
+</li>
+</ul>
 <h4 id="isSameOrBefore和isSameOrAfter"><a href="#isSameOrBefore和isSameOrAfter" class="headerlink" title="isSameOrBefore和isSameOrAfter"></a>isSameOrBefore和isSameOrAfter</h4><ul>
-<li><code>isSameOrBefore</code>判断是否一样或在某个时间之前，等同于<code>&gt;=</code>和<code>&lt;=</code>，第二参数会精准比较</li>
-</ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022-10-20'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isSameOrBefore</span><span class="token punctuation">(</span><span class="token string">'2021-12-31'</span><span class="token punctuation">,</span> <span class="token string">'year'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// false</span>
+<li><code>isSameOrBefore</code>判断是否一样或在某个时间之前，等同于<code>&gt;=</code>和<code>&lt;=</code>，第二参数会精准比较<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022-10-20'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isSameOrBefore</span><span class="token punctuation">(</span><span class="token string">'2021-12-31'</span><span class="token punctuation">,</span> <span class="token string">'year'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// false</span>
 </code></pre>
-<ul>
-<li><code>isSameOrBefore</code>判断是否一样或在某个时间之后，第二参数会精准比较</li>
-</ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022-10-20'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isSameOrAfter</span><span class="token punctuation">(</span><span class="token string">'2023-12-31'</span><span class="token punctuation">,</span> <span class="token string">'year'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// false</span>
+</li>
+<li><code>isSameOrBefore</code>判断是否一样或在某个时间之后，第二参数会精准比较<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022-10-20'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isSameOrAfter</span><span class="token punctuation">(</span><span class="token string">'2023-12-31'</span><span class="token punctuation">,</span> <span class="token string">'year'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// false</span>
 </code></pre>
+</li>
+</ul>
 <h4 id="isBetween"><a href="#isBetween" class="headerlink" title="isBetween"></a>isBetween</h4><ul>
-<li><code>isBetween</code>接收两个时间参数作为范围，比较moment是否在这个范围之内</li>
-</ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022-11-17'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isBetween</span><span class="token punctuation">(</span><span class="token string">'2022-11-10'</span><span class="token punctuation">,</span> <span class="token string">'2022-11-25'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
+<li><code>isBetween</code>接收两个时间参数作为范围，比较moment是否在这个范围之内<pre class=" language-javascript"><code class="language-javascript"><span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022-11-17'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isBetween</span><span class="token punctuation">(</span><span class="token string">'2022-11-10'</span><span class="token punctuation">,</span> <span class="token string">'2022-11-25'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
 </code></pre>
+</li>
+</ul>
 
                 
             </div>
@@ -1100,19 +1100,20 @@ $(function () {
     
 
     
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
 
     <!-- 雪花特效 -->
     
 
     <!-- 鼠标星星特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
-            }
-        </script>
     
 
      

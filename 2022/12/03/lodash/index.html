@@ -370,7 +370,9 @@ _<span class="token punctuation">.</span><span class="token function">isNull</sp
 <li><code>isFunction</code> – 判断值是否是fuction<pre class=" language-javascript"><code class="language-javascript">_<span class="token punctuation">.</span><span class="token function">isFunction</span><span class="token punctuation">(</span>_<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
 _<span class="token punctuation">.</span><span class="token function">isFunction</span><span class="token punctuation">(</span><span class="token regex">/abc/</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// false</span>
 </code></pre>
-<h3 id="02-转换类型"><a href="#02-转换类型" class="headerlink" title="02 转换类型"></a>02 转换类型</h3></li>
+</li>
+</ul>
+<h3 id="02-转换类型"><a href="#02-转换类型" class="headerlink" title="02 转换类型"></a>02 转换类型</h3><ul>
 <li><code>toArray</code> – 转换值为数组<pre class=" language-javascript"><code class="language-javascript">_<span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token string">'a'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 返回[1, 2]</span>
 _<span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token string">'abc'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 返回['a', 'b', 'c']</span>
 _<span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//[]</span>
@@ -385,7 +387,9 @@ _<span class="token punctuation">.</span><span class="token function">toInteger<
 _<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 返回 ''</span>
 _<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 返回 '1,2,3'</span>
 </code></pre>
-<h3 id="03-操作数组"><a href="#03-操作数组" class="headerlink" title="03 操作数组"></a>03 操作数组</h3></li>
+</li>
+</ul>
+<h3 id="03-操作数组"><a href="#03-操作数组" class="headerlink" title="03 操作数组"></a>03 操作数组</h3><ul>
 <li><code>_.concat</code> – 创建一个新数组，将array与任何数组或值拼接在一起。<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> other <span class="token operator">=</span> _<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 不会改变原数组</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 返回[1, 2, 3, [4]]</span>
@@ -408,22 +412,26 @@ _<span class="token punctuation">.</span><span class="token function">reverse</s
 <li><code>_.pull</code> – 移除在数组中指定的值（传参）<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 _<span class="token punctuation">.</span><span class="token function">pull</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// => [1, 1]</span>
 </code></pre>
-<h3 id="04-遍历集合"><a href="#04-遍历集合" class="headerlink" title="04 遍历集合"></a>04 遍历集合</h3></li>
+</li>
+</ul>
+<h3 id="04-遍历集合"><a href="#04-遍历集合" class="headerlink" title="04 遍历集合"></a>04 遍历集合</h3><ul>
 <li><code>forEach</code>遍历数组或对象<blockquote>
-<p><code>_.forEach(collection, [iteratee=_.identity])</code>，collection传入的是需要遍历的数组或对象，iteratee为返回类型，提供三个参数，<code>value</code>, <code>index|key</code>, <code>collection</code><br>遍历数组：</p>
+<p><code>_.forEach(collection, [iteratee=_.identity])</code>，collection传入的是需要遍历的数组或对象，iteratee为返回类型，提供三个参数，<code>value</code>, <code>index|key</code>, <code>collection</code></p>
 </blockquote>
+</li>
+</ul>
+<p>遍历数组：</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'cake'</span><span class="token punctuation">,</span> <span class="token string">'fruit'</span><span class="token punctuation">,</span> <span class="token string">'rice'</span><span class="token punctuation">,</span> <span class="token string">'soup'</span><span class="token punctuation">]</span>
 <span class="token comment" spellcheck="true">// 以下为两种写法，返回值一样</span>
 <span class="token function">_</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> collection<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
- console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
 _<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> <span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> collection<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
- console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token comment" spellcheck="true">// value为数组每一项的值，index是对应的索引，collection是整个数组</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token comment" spellcheck="true">// value为数组每一项的值，index是对应的索引，collection是整个数组</span>
 </code></pre>
-返回：<br><img src="https://img-blog.csdnimg.cn/2b27b0f4eb12454fbdb3571544ddb1ec.png" alt="返回结果"></li>
-</ul>
+<p>返回：<br><img src="https://img-blog.csdnimg.cn/2b27b0f4eb12454fbdb3571544ddb1ec.png" alt="返回结果"></p>
 <p>遍历对象：</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span><span class="token string">'cake'</span><span class="token punctuation">,</span> taste<span class="token punctuation">:</span><span class="token string">'sweet'</span><span class="token punctuation">,</span> flavor<span class="token punctuation">:</span><span class="token string">'flour'</span><span class="token punctuation">,</span> price<span class="token punctuation">:</span><span class="token string">'15'</span><span class="token punctuation">}</span>
 <span class="token comment" spellcheck="true">// 以下为两种写法，返回值一样</span>
@@ -1130,19 +1138,20 @@ $(function () {
     
 
     
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
 
     <!-- 雪花特效 -->
     
 
     <!-- 鼠标星星特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
-            }
-        </script>
     
 
      

@@ -329,9 +329,9 @@ yarn add moment-timezone
                 <blockquote>
 <p><code>moment.timezone</code>是<code>moment</code>额外封装的一个插件，专门用于修改时区，具有部分moment的方法。</p>
 </blockquote>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre class=" language-javascript"><code class="language-javascript">npm install moment<span class="token operator">-</span>timezone
-<span class="token comment" spellcheck="true">//或</span>
-yarn add moment<span class="token operator">-</span>timezone
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre class=" language-script"><code class="language-script">npm install moment-timezone
+//或
+yarn add moment-timezone
 </code></pre>
 <h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> moment <span class="token keyword">from</span> <span class="token string">'moment-timezone'</span>
 </code></pre>
@@ -347,14 +347,14 @@ yarn add moment<span class="token operator">-</span>timezone
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">'2022-11-01'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tz</span><span class="token punctuation">(</span><span class="token string">"America/Los_Angeles"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'YYYY-MM-DD HH:mm:ss'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//返回2022-10-31 09:00:00，洛杉矶与北京的时差为16小时</span>
 </code></pre>
 <ul>
-<li>提示：以下两种书写方式返回的不一样</li>
-</ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> time1 <span class="token operator">=</span> moment<span class="token punctuation">.</span><span class="token function">tz</span><span class="token punctuation">(</span><span class="token string">"2013-11-18 11:55"</span><span class="token punctuation">,</span> <span class="token string">"America/Los_Angeles"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<li>提示：以下两种书写方式返回的不一样<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> time1 <span class="token operator">=</span> moment<span class="token punctuation">.</span><span class="token function">tz</span><span class="token punctuation">(</span><span class="token string">"2013-11-18 11:55"</span><span class="token punctuation">,</span> <span class="token string">"America/Los_Angeles"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> time2 <span class="token operator">=</span> <span class="token function">moment</span><span class="token punctuation">(</span><span class="token string">"2013-11-18 11:55"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tz</span><span class="token punctuation">(</span><span class="token string">"America/Los_Angeles"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <blockquote>
 <p>time1 返回的是这个时间附带上洛杉矶时区名字（并没有切换时间到洛杉矶时区）<br>time2 返回的是切换到洛杉矶时区后的时间</p>
 </blockquote>
+</li>
+</ul>
 <h2 id="默认时区"><a href="#默认时区" class="headerlink" title="默认时区"></a>默认时区</h2><ul>
 <li>更换默认时区，之后获得的时间都是重置之后时区的时间<pre class=" language-javascript"><code class="language-javascript">moment<span class="token punctuation">.</span>tz<span class="token punctuation">.</span><span class="token function">setDefault</span><span class="token punctuation">(</span><span class="token string">"America/New_York"</span><span class="token punctuation">)</span>
 <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'YYYY-MM-DD HH:mm:ss'</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//返回的是纽约的当地时间</span>
@@ -363,7 +363,7 @@ yarn add moment<span class="token operator">-</span>timezone
 <li>想要恢复当地的默认时区，则不带参数调用<pre class=" language-javascript"><code class="language-javascript">moment<span class="token punctuation">.</span>tz<span class="token punctuation">.</span><span class="token function">setDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <h2 id="可选时区"><a href="#可选时区" class="headerlink" title="可选时区"></a>可选时区</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="http://momentjs.cn/timezone/">官网</a>提供了能转换的所有时区，以地图的形式展示。<br><img src="https://img-blog.csdnimg.cn/6820453935cd424d96447833b189b58c.png" alt="在这里插入图片描述"></p>
+<p><a target="_blank" rel="noopener" href="http://momentjs.cn/timezone/">官网</a>提供了能转换的所有时区，以地图的形式展示。<br><img src="https://img-blog.csdnimg.cn/6820453935cd424d96447833b189b58c.png" alt="官网全球时区图"></p>
 </blockquote>
 </li>
 </ul>
@@ -995,19 +995,20 @@ $(function () {
     
 
     
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
 
     <!-- 雪花特效 -->
     
 
     <!-- 鼠标星星特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
-            }
-        </script>
     
 
      
