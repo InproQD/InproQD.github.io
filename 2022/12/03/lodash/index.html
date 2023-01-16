@@ -401,10 +401,10 @@ _<span class="token punctuation">.</span><span class="token function">drop</span
 _<span class="token punctuation">.</span><span class="token function">drop</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// => [1, 2, 3]</span>
 </code></pre>
 </li>
-<li><code>_.uniq</code> – 获得==去重==后的新数组<pre class=" language-javascript"><code class="language-javascript">_<span class="token punctuation">.</span><span class="token function">uniq</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// => [2, 1];</span>
+<li><code>_.uniq</code> – 获得<code>去重</code>后的新数组<pre class=" language-javascript"><code class="language-javascript">_<span class="token punctuation">.</span><span class="token function">uniq</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// => [2, 1];</span>
 </code></pre>
 </li>
-<li><code>_.reverse</code> – 将数组的元素顺序==反转==，返回一个新数组<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<li><code>_.reverse</code> – 将数组的元素顺序<code>反转</code>，返回一个新数组<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 _<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// => [3, 2, 1] </span>
 </code></pre>
 </li>
@@ -414,16 +414,16 @@ _<span class="token punctuation">.</span><span class="token function">pull</span
 </li>
 </ul>
 <h3 id="04-遍历集合"><a href="#04-遍历集合" class="headerlink" title="04 遍历集合"></a>04 遍历集合</h3><ul>
-<li><code>forEach</code>遍历数组或对象<blockquote>
+<li><code>forEach</code>遍历数组或对象</li>
+</ul>
+<blockquote>
 <p><code>_.forEach(collection, [iteratee=_.identity])</code>，collection传入的是需要遍历的数组或对象，iteratee为返回类型，提供三个参数，<code>value</code>, <code>index|key</code>, <code>collection</code></p>
 </blockquote>
-</li>
-</ul>
 <p>遍历数组：</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'cake'</span><span class="token punctuation">,</span> <span class="token string">'fruit'</span><span class="token punctuation">,</span> <span class="token string">'rice'</span><span class="token punctuation">,</span> <span class="token string">'soup'</span><span class="token punctuation">]</span>
 <span class="token comment" spellcheck="true">// 以下为两种写法，返回值一样</span>
 <span class="token function">_</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> collection<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span> 
    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
 _<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> <span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> collection<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> collection<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -444,11 +444,11 @@ _<span class="token punctuation">.</span><span class="token function">forEach</s
 </code></pre>
 <p>返回：<br><img src="https://img-blog.csdnimg.cn/dc652c6ab3d0417fb8eb407ef021981c.png" alt="返回结果"></p>
 <h3 id="05-函数（防抖、节流）"><a href="#05-函数（防抖、节流）" class="headerlink" title="05 函数（防抖、节流）"></a>05 函数（防抖、节流）</h3><ul>
-<li>防抖函数<code>_.debounce(func, [wait=0], [options=])</code><blockquote>
+<li>防抖函数<code>_.debounce(func, [wait=0], [options=])</code></li>
+</ul>
+<blockquote>
 <p>防抖函数，通俗来讲，就是在某段时间内，不管触发多少次函数，只认最后一次，例如：淘宝搜索栏，但你打完最后一个字，才会触发搜索功能。<code>loadash</code>的<code>debounce</code>函数接收三个参数，第一个参数是要执行的函数体，第二参数是设置的时间范围，第三参数可传入选项<code>leading</code>（默认为false，用来设置function是否在延迟开始之前调用） 、<code>trailing</code>（默认为true，用来设置function是否在延迟结束后调用）、<code>maxWait</code>(function允许被延迟的最大值)</p>
 </blockquote>
-</li>
-</ul>
 <p>这里是在Vue项目中使用的示例：</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
     <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"clickBtn"</span><span class="token operator">></span>防抖<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
@@ -461,12 +461,6 @@ _<span class="token punctuation">.</span><span class="token function">forEach</s
    clickBtn<span class="token punctuation">:</span>_<span class="token punctuation">.</span><span class="token function">debounce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">)</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span>
-   <span class="token punctuation">}</span>
-  
-   clickBtn<span class="token punctuation">:</span>_<span class="token punctuation">.</span><span class="token function">debounce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">)</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">'leading'</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span><span class="token string">'trailing'</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span>
    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
@@ -483,11 +477,11 @@ _<span class="token punctuation">.</span><span class="token function">forEach</s
 <p>设置<code>leading</code>为true，在点击按钮后立马打印<code>111</code>，且在规定时间内只打印一次</p>
 </blockquote>
 <ul>
-<li>节流函数<code>_.throttle(func, [wait=0], [options=])</code><blockquote>
+<li>节流函数<code>_.throttle(func, [wait=0], [options=])</code></li>
+</ul>
+<blockquote>
 <p>同理，节流函数就是在定义的一段时间内，不管触发多少次函数，只执行一次回调（只认第一次触发）。<code>throttle</code>也是接收三个参数，但是第三参数<code>options</code>只有两个选项：<code>leading</code>、<code>trailing</code>，默认都为<code>true</code></p>
 </blockquote>
-</li>
-</ul>
 <p>示例：</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
     <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"clickBtn"</span><span class="token operator">></span>节流<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
@@ -507,6 +501,27 @@ _<span class="token punctuation">.</span><span class="token function">forEach</s
 <blockquote>
 <p>因为<code>throttle</code>的<code>leading</code>和<code>trailing</code>都默认为<code>true</code>，所以在第一次点击时会立即打印<code>111</code>，并且在设置时间内（代码为2秒），再次点击按钮，则会在两秒之后打印<code>111</code>。想要实现不同的节流效果，自行设置<code>leading</code>、<code>trailing</code>即可</p>
 </blockquote>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
+    <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"clickBtn"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+<span class="token keyword">const</span> _ <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'lodash'</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 防抖</span>
+  clickBtn<span class="token punctuation">:</span>_<span class="token punctuation">.</span><span class="token function">debounce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">// 要执行的函数体</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 等待的时间</span>
+  <span class="token comment" spellcheck="true">// 节流</span>
+   clickBtn<span class="token punctuation">:</span>_<span class="token punctuation">.</span><span class="token function">throttle</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">2000</span><span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+</code></pre>
 
                 
             </div>
@@ -618,18 +633,17 @@ _<span class="token punctuation">.</span><span class="token function">forEach</s
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/12/03/lodash/">
+                <a href="/2023/01/16/xin-jian-wen-ben-wen-dang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Lodash">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Vue项目打包问题（生产环境样式失效）">
                         
-                        <span class="card-title">Lodash</span>
+                        <span class="card-title">Vue项目打包问题（生产环境样式失效）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -639,9 +653,9 @@ _<span class="token punctuation">.</span><span class="token function">forEach</s
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-03
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-01-16
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -650,12 +664,11 @@ _<span class="token punctuation">.</span><span class="token function">forEach</s
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JS-Plugins/">
-                        <span class="chip bg-color">JS Plugins</span>
+                    <a href="/tags/Webpack/">
+                        <span class="chip bg-color">Webpack</span>
                     </a>
                     
                 </div>
@@ -923,7 +936,7 @@ _<span class="token punctuation">.</span><span class="token function">forEach</s
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <a href="/about" target="_blank">Peter Q</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>

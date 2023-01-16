@@ -4,13 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="currency.js, InproQD">
-    <meta name="description" content="一、用途
-currency可用于货币与数字之间的转换，还可用于数值的加减乘除（主要解决的是浮点数的问题）
+    <meta name="keywords" content="Vue项目打包问题（生产环境样式失效）, InproQD">
+    <meta name="description" content="前言
+在公司项目发布上线后，出现了部分样式失效的问题。我们引用的是vuetify第三方库，经过检查，发现是部分样式被vuetify自带的css样式给覆盖，原因是生成环境的打包模式与开发环境不同。
 
-const num = 0.1 + 0.2 // 返回结果0.30000000000000004
-// 用curreny进行运算
-c">
+打包模式的区别
+生产模式（env.prod">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +21,7 @@ c">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>currency.js | InproQD</title>
+    <title>Vue项目打包问题（生产环境样式失效） | InproQD</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -258,12 +257,12 @@ c">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">currency.js</h1>
+                    <h1 class="description center-align post-title">Vue项目打包问题（生产环境样式失效）</h1>
                 </div>
             </div>
         </div>
@@ -287,8 +286,8 @@ c">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JS-Plugins/">
-                                <span class="chip bg-color">JS Plugins</span>
+                            <a href="/tags/Webpack/">
+                                <span class="chip bg-color">Webpack</span>
                             </a>
                         
                     </div>
@@ -303,7 +302,7 @@ c">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-19
+                    2023-01-16
                 </div>
                 
 
@@ -324,89 +323,71 @@ c">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、用途"><a href="#一、用途" class="headerlink" title="一、用途"></a>一、用途</h2><blockquote>
-<p><code>currency</code>可用于货币与数字之间的转换，还可用于数值的加减乘除（主要解决的是浮点数的问题）</p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>在公司项目发布上线后，出现了部分样式失效的问题。我们引用的是vuetify第三方库，经过检查，发现是部分样式被vuetify自带的css样式给覆盖，原因是生成环境的打包模式与开发环境不同。</p>
 </blockquote>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> num <span class="token operator">=</span> <span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.2</span> <span class="token comment" spellcheck="true">// 返回结果0.30000000000000004</span>
-<span class="token comment" spellcheck="true">// 用curreny进行运算</span>
-<span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">0.2</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 返回0.3</span>
-</code></pre>
-<h2 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h2><pre class=" language-script"><code class="language-script">npm install --save currency.js
-// 或者
-yarn add currency.js
-</code></pre>
-<h2 id="三、引入"><a href="#三、引入" class="headerlink" title="三、引入"></a>三、引入</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> currency <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'currency.js'</span><span class="token punctuation">)</span>
-</code></pre>
-<h2 id="四、使用"><a href="#四、使用" class="headerlink" title="四、使用"></a>四、使用</h2><h3 id="01-转换货币格式"><a href="#01-转换货币格式" class="headerlink" title="01 转换货币格式"></a>01 转换货币格式</h3><ul>
-<li>默认转为美元格式<code>$</code><pre class=" language-javascript"><code class="language-javascript"><span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//$1,000.00</span>
-</code></pre>
+<h2 id="打包模式的区别"><a href="#打包模式的区别" class="headerlink" title="打包模式的区别"></a>打包模式的区别</h2><ul>
+<li><p>生产模式（env.prod）</p>
+<blockquote>
+<p>在<code>生产模式</code>下打包，项目会被最小化，所有的css代码会被提取出来放在同一文件夹下（这也是上线后样式出现问题的根本原因）</p>
+</blockquote>
 </li>
-<li>自定义货币格式<blockquote>
-<p>用<code>&#123;&#125;</code>囊括配置项<br><code>precision</code>指代精确到小数点哪一位，可选0，1，2…<br><code>symbol</code>则是数字前的符号，一般配置货币符号<br><code>decimal</code>选项是配置小数点那一位的符号（替换小数点）<br><code>separator</code>指代分隔符，按照三位数一个分隔符来格式化</p>
+<li><p>开发模式</p>
+<blockquote>
+<p><code>开发模式</code>打包并不会改变项目的层次结构，换句话说，我们在写代码过程中，页面长啥样，打包上线后就是原本的样式，该模式下并不会改变代码。但是该模式打包后的dist文件依旧比<code>生产模式</code>打包后的项目大很多。</p>
 </blockquote>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">1000.12</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>precision<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> symbol<span class="token punctuation">:</span> <span class="token string">'¥'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// ¥1,000</span>
-<span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">1000.12</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>symbol<span class="token punctuation">:</span> <span class="token string">'€'</span><span class="token punctuation">,</span> decimal<span class="token punctuation">:</span> <span class="token string">','</span><span class="token punctuation">,</span> separator<span class="token punctuation">:</span> <span class="token string">'.'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// €1.000,12</span>
-</code></pre>
 </li>
 </ul>
-<h3 id="02-返回值类型"><a href="#02-返回值类型" class="headerlink" title="02 返回值类型"></a>02 返回值类型</h3><ul>
-<li>value<blockquote>
-<p>返回的是原本的值，返回类型是==number==, 输入字符串类型的数字也会转==number==</p>
+<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><p><img src="https://img-blog.csdnimg.cn/dfdc2daed606451d8066807a71ebf0a2.png"></p>
+<blockquote>
+<p>首先我们要知道为什么vuetify的样式会覆盖自定义样式，因为自定义的样式优先级不够高！在生产模式下，所有css代码会被提取到一个文件夹下，而第三方库的css一般会多个类名绑定（例如: .themelight .v-btn），如果自定义样式只绑定一个类名（没有在父类的作用域下），样式优先级不够高，就会被覆盖。</p>
 </blockquote>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">121.3</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token comment" spellcheck="true">// 返回121.3</span>
-</code></pre>
-</li>
-<li>intValue<blockquote>
-<p>把小数点后两位的数字转为整数（相当于乘以一百），并且会把小数点第三位的数字四舍五入到第二位。先四舍五入，再乘100</p>
-</blockquote>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">121.3</span><span class="token punctuation">)</span><span class="token punctuation">.</span>intValue<span class="token comment" spellcheck="true">// 返回1213</span>
-<span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">121.34</span><span class="token punctuation">)</span><span class="token punctuation">.</span>intValue<span class="token comment" spellcheck="true">// 返回12134</span>
-<span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">121.344</span><span class="token punctuation">)</span><span class="token punctuation">.</span>intValue<span class="token comment" spellcheck="true">// 返回12134</span>
-<span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">121.349</span><span class="token punctuation">)</span><span class="token punctuation">.</span>intValue<span class="token comment" spellcheck="true">// 返回12135</span>
-<span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">.</span>intValue<span class="token comment" spellcheck="true">// 返回8000</span>
-</code></pre>
-</li>
-<li>dollar<blockquote>
-<p>去掉小数后面的值，返回整数，不进行四舍五入</p>
-</blockquote>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">121.34</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">dollars</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 返回 121</span>
-<span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">0.45</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">dollars</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 返回 0</span>
-</code></pre>
-</li>
-<li>cents<blockquote>
-<p>去掉小数点之前的值，返回小数点之后的整数</p>
-</blockquote>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">121.34</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">cents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 返回 34</span>
-<span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">0.45</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">cents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 返回 45</span>
-</code></pre>
-</li>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ul>
+<li>方案一：配置<code>vue.config.js</code>文件</li>
 </ul>
-<h3 id="03-运算"><a href="#03-运算" class="headerlink" title="03 运算"></a>03 运算</h3><blockquote>
-<p><code>curreny</code>提供的数字运算支持负数运算</p>
+<blockquote>
+<p>在<code>vue.config.js</code>文件中将css的<code>extract</code>设置为false，生产环境打包默认为true，这个选项会把css代码提取到一个文件夹下。注意：开发环境的extract选项默认为false</p>
 </blockquote>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  css<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    extract<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
 <ul>
-<li>add （加）<pre class=" language-javascript"><code class="language-javascript"><span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">121.34</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token number">01</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 返回  "123.35"</span>
-<span class="token comment" spellcheck="true">// 负数运算</span>
-<span class="token function">currency</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">120</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//返回  "80"</span>
-</code></pre>
-</li>
-<li>subtract（减）<pre class=" language-javascript"><code class="language-javascript"><span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">320</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">subtract</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 120</span>
-<span class="token function">currency</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">120</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">subtract</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// -320</span>
-</code></pre>
-</li>
-<li>multiply （乘）<pre class=" language-javascript"><code class="language-javascript"><span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">123.45</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">multiply</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 246.9</span>
-<span class="token function">currency</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">multiply</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 6</span>
-</code></pre>
-</li>
-<li>divide （除）<pre class=" language-javascript"><code class="language-javascript"><span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">240</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">divide</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 120</span>
-<span class="token function">currency</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">240</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">divide</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// -120</span>
-</code></pre>
-</li>
-<li>distribute （均分）<pre class=" language-javascript"><code class="language-javascript"><span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">24</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">distribute</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// => [8, 8, 8]</span>
-<span class="token function">currency</span><span class="token punctuation">(</span><span class="token number">23</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">distribute</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// => [7.67, 7.67, 7.66]</span>
-</code></pre>
-</li>
+<li>方案二：覆盖第三方组件原有的类，或者加样式穿透</li>
 </ul>
+<blockquote>
+<p>当我们想修改第三方组件的样式时，可以选择覆盖其原有的类</p>
+</blockquote>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
+   <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"button-box"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>v<span class="token operator">-</span>btn<span class="token operator">></span>Submit<span class="token operator">&lt;</span><span class="token operator">/</span>v<span class="token operator">-</span>btn<span class="token operator">></span>
+   <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>style lang<span class="token operator">=</span><span class="token string">"sass"</span> scoped<span class="token operator">></span>
+<span class="token punctuation">.</span>button<span class="token operator">-</span>box
+  <span class="token comment" spellcheck="true">//v-btn是当前组件已有的类，在这里设置属性可以覆盖原有的</span>
+  <span class="token punctuation">.</span>v<span class="token operator">-</span>btn
+    color<span class="token punctuation">:</span>#<span class="token number">020202</span>   
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
+</code></pre>
+<blockquote>
+<p>也可使用<code>&gt;&gt;&gt;</code>来提升样式优先级，俗称样式穿透</p>
+</blockquote>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
+   <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"button-box"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>v<span class="token operator">-</span>btn <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"submit-btn"</span><span class="token operator">></span>Submit<span class="token operator">&lt;</span><span class="token operator">/</span>v<span class="token operator">-</span>btn<span class="token operator">></span>
+   <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>style lang<span class="token operator">=</span><span class="token string">"sass"</span> scoped<span class="token operator">></span>
+<span class="token punctuation">.</span>button<span class="token operator">-</span>box <span class="token operator">></span><span class="token operator">></span><span class="token operator">></span> <span class="token punctuation">.</span>submit<span class="token operator">-</span>btn
+  color<span class="token punctuation">:</span> #<span class="token number">020202</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
+</code></pre>
 
                 
             </div>
@@ -433,7 +414,7 @@ yarn add currency.js
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://inproqd.github.io/2022/11/19/currency/">http://inproqd.github.io/2022/11/19/currency/</a>
+                    <a href="http://inproqd.github.io/2023/01/16/xin-jian-wen-ben-wen-dang/">http://inproqd.github.io/2023/01/16/xin-jian-wen-ben-wen-dang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -471,8 +452,8 @@ yarn add currency.js
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JS-Plugins/">
-                                    <span class="chip bg-color">JS Plugins</span>
+                                <a href="/tags/Webpack/">
+                                    <span class="chip bg-color">Webpack</span>
                                 </a>
                             
                         </div>
@@ -518,17 +499,18 @@ yarn add currency.js
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/11/20/momentjs/">
+                <a href="/2023/01/16/xin-jian-wen-ben-wen-dang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="moment.js">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Vue项目打包问题（生产环境样式失效）">
                         
-                        <span class="card-title">moment.js</span>
+                        <span class="card-title">Vue项目打包问题（生产环境样式失效）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -538,9 +520,9 @@ yarn add currency.js
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -549,11 +531,12 @@ yarn add currency.js
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JS-Plugins/">
-                        <span class="chip bg-color">JS Plugins</span>
+                    <a href="/tags/Webpack/">
+                        <span class="chip bg-color">Webpack</span>
                     </a>
                     
                 </div>
@@ -567,13 +550,13 @@ yarn add currency.js
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/10/29/vuetify-study-note-section-three/">
+                <a href="/2022/12/03/lodash/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Vuetify学习记录（三）-- v-data-table">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Lodash">
                         
-                        <span class="card-title">Vuetify学习记录（三）-- v-data-table</span>
+                        <span class="card-title">Lodash</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -584,7 +567,7 @@ yarn add currency.js
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-03
                             </span>
                         <span class="publish-author">
                             
@@ -597,8 +580,8 @@ yarn add currency.js
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vuetify/">
-                        <span class="chip bg-color">Vuetify</span>
+                    <a href="/tags/JS-Plugins/">
+                        <span class="chip bg-color">JS Plugins</span>
                     </a>
                     
                 </div>
